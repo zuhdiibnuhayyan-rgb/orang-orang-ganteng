@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Sensor | Monitoring IoT</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+
+  <style>
+    body{
+      margin:0;
+      font-family:Arial, sans-serif;
+      background:#0f172a;
+      color:white;
+    }
+
+    .app-shell{
+      display:flex;
+      min-height:100vh;
+    }
+
+    .sidebar{
+      width:250px;
+      background:#111827;
+      padding:20px;
+    }
+
+    .sidebar-brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom:30px;
+      font-size:20px;
+      font-weight:bold;
+    }
+
+    .sidebar-brand img{
+      width:40px;
+    }
+
+    .sidebar-nav{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+
+    .sidebar-nav a{
+      text-decoration:none;
+      color:#cbd5e1;
+      padding:12px;
+      border-radius:10px;
+      transition:0.3s;
+    }
+
+    .sidebar-nav a:hover,
+    .sidebar-nav .active{
+      background:#7c3aed;
+      color:white;
+    }
+
+    .main{
+      flex:1;
+      padding:30px;
+    }
+
+    .page-title{
+      margin-bottom:30px;
+    }
+
+    .sensor-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+
+    .sensor-card{
+      background:#1e293b;
+      padding:25px;
+      border-radius:20px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .sensor-card h3{
+      margin:0 0 10px;
+      font-size:18px;
+      color:#cbd5e1;
+    }
+
+    .sensor-value{
+      font-size:40px;
+      font-weight:bold;
+      margin-bottom:10px;
+    }
+
+    .status{
+      display:inline-block;
+      padding:6px 12px;
+      border-radius:999px;
+      font-size:14px;
+      background:#22c55e;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="app-shell">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="sidebar-brand">
+      <img src="img/logo.png" alt="">
+      <span>Monitoring<strong>IoT</strong></span>
+    </div>
+
+    <nav class="sidebar-nav">
+
+      <a href="dashboard.html">
+        📊 Dashboard
+      </a>
+
+      <a href="sensor.html" class="active">
+        🌡 Sensor
+      </a>
+
+      <a href="riwayat.html">
+        📈 Riwayat
+      </a>
+
+      <a href="pengaturan.html">
+        ⚙ Pengaturan
+      </a>
+
+    </nav>
+
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <div class="page-title">
+      <h1>Data Sensor</h1>
+      <p>Monitoring sensor secara realtime</p>
+    </div>
+
+    <div class="sensor-grid">
+
+      <div class="sensor-card">
+        <h3>Suhu</h3>
+        <div class="sensor-value">28°C</div>
+        <span class="status">Normal</span>
+      </div>
+
+      <div class="sensor-card">
+        <h3>Kelembapan</h3>
+        <div class="sensor-value">75%</div>
+        <span class="status">Stabil</span>
+      </div>
+
+      <div class="sensor-card">
+        <h3>Tekanan</h3>
+        <div class="sensor-value">1008 hPa</div>
+        <span class="status">Aman</span>
+      </div>
+
+      <div class="sensor-card">
+        <h3>Cahaya</h3>
+        <div class="sensor-value">640 lx</div>
+        <span class="status">Cerah</span>
+      </div>
+
+    </div>
+
+  </main>
+
+</div>
+
+</body>
+</html>
